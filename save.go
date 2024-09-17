@@ -27,28 +27,28 @@ type persistence struct {
 }
 
 type Step struct {
-	Id         string `gorm:"primaryKey"`
+	Id         string `gorm:"primaryKey;type:char(36)"`
 	Name       string
 	Status     int8
-	ProcId     string // Add ProcID to directly link Step to its parent Process
-	FlowId     string // Add FlowID to directly link Step to its parent Flow
+	ProcId     string `gorm:"type:char(36)"`
+	FlowId     string `gorm:"type:char(36)"`
 	CreatedAt  *time.Time
 	UpdatedAt  *time.Time
 	FinishedAt *time.Time
 }
 
 type Process struct {
-	Id         string `gorm:"primaryKey"`
+	Id         string `gorm:"primaryKey;type:char(36)"`
 	Name       string
 	Status     int8
-	FlowId     string // Add FlowID to directly link Process to its parent Flow
+	FlowId     string `gorm:"type:char(36)"`
 	CreatedAt  *time.Time
 	UpdatedAt  *time.Time
 	FinishedAt *time.Time
 }
 
 type Flow struct {
-	Id         string `gorm:"primaryKey"`
+	Id         string `gorm:"primaryKey;type:char(36)"`
 	Name       string
 	Status     int8
 	CreatedAt  *time.Time
@@ -56,7 +56,7 @@ type Flow struct {
 	FinishedAt *time.Time
 }
 
-func NewPersistence(db *gorm.DB) Persistence {
+func NewPersistPlugin(db *gorm.DB) Persistence {
 	p := &persistence{db}
 	return p
 }

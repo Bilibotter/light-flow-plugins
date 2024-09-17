@@ -195,7 +195,7 @@ func TestMultipleTimesPersist(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failureed to open database: %v", err)
 	}
-	if err = plugins.NewPersistence(db0).InjectPersistence(); err != nil {
+	if err = plugins.NewPersistPlugin(db0).InjectPersistence(); err != nil {
 		t.Logf("Error injecting persistence: %v", err)
 		return
 	}
@@ -215,7 +215,7 @@ func TestSuccessStepPersist(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failureed to open database: %v", err)
 	}
-	if err = plugins.NewPersistence(db0).InjectPersistence(); err != nil {
+	if err = plugins.NewPersistPlugin(db0).InjectPersistence(); err != nil {
 		t.Logf("Error injecting persistence: %v", err)
 		return
 	}
@@ -233,7 +233,7 @@ func TestFailureStepPersist(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failureed to open database: %v", err)
 	}
-	if err = plugins.NewPersistence(db0).InjectPersistence(); err != nil {
+	if err = plugins.NewPersistPlugin(db0).InjectPersistence(); err != nil {
 		t.Logf("Error injecting persistence: %v", err)
 		return
 	}
