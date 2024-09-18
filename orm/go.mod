@@ -1,4 +1,4 @@
-module github.com/Bilibotter/light-flow-plugins
+module github.com/Bilibotter/light-flow-plugins/orm
 
 go 1.18
 

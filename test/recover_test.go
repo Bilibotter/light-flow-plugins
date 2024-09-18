@@ -3,7 +3,7 @@ package test
 import (
 	"errors"
 	flow "github.com/Bilibotter/light-flow"
-	plugins "github.com/Bilibotter/light-flow-plugins"
+	plugins "github.com/Bilibotter/light-flow-plugins/orm"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"sync/atomic"
