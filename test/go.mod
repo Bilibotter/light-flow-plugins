@@ -3,7 +3,7 @@ module test
 go 1.18
 
 require (
-	github.com/Bilibotter/light-flow v0.0.27
+	github.com/Bilibotter/light-flow v0.0.29
 	github.com/Bilibotter/light-flow-plugins/orm v0.0.0
 	gorm.io/driver/mysql v1.5.7
 	gorm.io/gorm v1.25.12

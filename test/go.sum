@@ -1,5 +1,5 @@
-github.com/Bilibotter/light-flow v0.0.27 h1:dcn50AhJf1p1wEoQIwMhO6+xL1FvSh2Aj7nPQAWlD74=
-github.com/Bilibotter/light-flow v0.0.27/go.mod h1:FFBms3ZWg4cCoHwnw23wjU+eTin5YRz1ST7dbZrpsyI=
+github.com/Bilibotter/light-flow v0.0.29 h1:HAPpnRKLXr6v4FRu+7PmvA5oeXYOJeKm0EhIFtXOA68=
+github.com/Bilibotter/light-flow v0.0.29/go.mod h1:FFBms3ZWg4cCoHwnw23wjU+eTin5YRz1ST7dbZrpsyI=
 github.com/go-sql-driver/mysql v1.7.0 h1:ueSltNNllEqE3qcWBTD0iQd3IpL/6U+mJxLkazJ7YPc=
 github.com/go-sql-driver/mysql v1.7.0/go.mod h1:OXbVy3sEdcQ2Doequ6Z5BW6fXNQTmx+9S1MCJN5yJMI=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
