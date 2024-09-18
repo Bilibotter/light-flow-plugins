@@ -1,7 +1,7 @@
 package orm
 
 import (
-	flow "github.com/Bilibotter/light-flow"
+	"github.com/Bilibotter/light-flow/flow"
 	"gorm.io/gorm"
 	"strings"
 	"time"

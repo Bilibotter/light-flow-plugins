@@ -3,7 +3,7 @@ module github.com/Bilibotter/light-flow-plugins/orm
 go 1.18
 
 require (
-	github.com/Bilibotter/light-flow v0.0.29
+	github.com/Bilibotter/light-flow/flow v0.0.1
 	gorm.io/gorm v1.25.12
 )
 
