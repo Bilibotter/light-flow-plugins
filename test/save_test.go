@@ -201,7 +201,7 @@ func TestMultipleTimesPersist(t *testing.T) {
 	}
 	wf := flow.RegisterFlow("TestMultipleTimesPersist")
 	proc := wf.Process("TestMultipleTimesPersist")
-	proc.NameStep(func(_ flow.Step) (any, error) {
+	proc.CustomStep(func(_ flow.Step) (any, error) {
 		return "hello", nil
 	}, "1")
 	for i := 0; i < 8; i++ {
@@ -221,7 +221,7 @@ func TestSuccessStepPersist(t *testing.T) {
 	}
 	wf := flow.RegisterFlow("TestSuccessStepPersist")
 	proc := wf.Process("TestSuccessStepPersist")
-	proc.NameStep(func(_ flow.Step) (any, error) {
+	proc.CustomStep(func(_ flow.Step) (any, error) {
 		return "hello", nil
 	}, "1")
 	ff := flow.DoneFlow("TestSuccessStepPersist", nil)
@@ -239,7 +239,7 @@ func TestFailureStepPersist(t *testing.T) {
 	}
 	wf := flow.RegisterFlow("TestFailureStepPersist")
 	proc := wf.Process("TestFailureStepPersist")
-	proc.NameStep(func(_ flow.Step) (any, error) {
+	proc.CustomStep(func(_ flow.Step) (any, error) {
 		return nil, fmt.Errorf("failure")
 	}, "1")
 	ff := flow.DoneFlow("TestFailureStepPersist", nil)

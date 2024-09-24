@@ -25,7 +25,7 @@ func TestRecover(t *testing.T) {
 	wf := flow.RegisterFlow("TestRecover")
 	wf.EnableRecover()
 	proc := wf.Process("TestRecover")
-	proc.NameStep(func(ctx flow.Step) (any, error) {
+	proc.CustomStep(func(ctx flow.Step) (any, error) {
 		t.Logf("Step[%s] start", ctx.Name())
 		if atomic.LoadInt64(&suc) == 0 {
 			ctx.Set("hello", "world")
@@ -38,7 +38,7 @@ func TestRecover(t *testing.T) {
 		t.Logf("Step[%s] succeed", ctx.Name())
 		return nil, nil
 	}, "1")
-	proc.NameStep(func(ctx flow.Step) (any, error) {
+	proc.CustomStep(func(ctx flow.Step) (any, error) {
 		t.Logf("Step[%s] start", ctx.Name())
 		if key, exist := ctx.Get("hello"); !exist {
 			t.Errorf("Step[%s] failed, key not found", ctx.Name())
