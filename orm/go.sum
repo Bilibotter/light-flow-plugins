@@ -1,9 +1,5 @@
-github.com/Bilibotter/light-flow/flow v0.0.2 h1:i2Ic24554g8pqCt/1qoY5DrUBrRhMk7clEQ/XuamNwk=
-github.com/Bilibotter/light-flow/flow v0.0.2/go.mod h1:0PY9M86uqsZLE3Yw16dGHl5YRGKghl40CSMhFQbw3Cs=
-github.com/Bilibotter/light-flow/flow v0.0.3 h1:S2Nb95PBIHeeoEFZwi2R/fjz442DPTBapq8roz78OQo=
-github.com/Bilibotter/light-flow/flow v0.0.3/go.mod h1:0PY9M86uqsZLE3Yw16dGHl5YRGKghl40CSMhFQbw3Cs=
-github.com/Bilibotter/light-flow/flow v0.0.7 h1:Q1Z5ZZxg2NFGEszRqz0ZoRc+Po4MBL3r+qrTCg1l220=
-github.com/Bilibotter/light-flow/flow v0.0.7/go.mod h1:0PY9M86uqsZLE3Yw16dGHl5YRGKghl40CSMhFQbw3Cs=
+github.com/Bilibotter/light-flow/flow v0.0.8 h1:l3CGqNtg/o4ehYsLIwM1qrh3ERF+AaKwfmZ3OWxH6cQ=
+github.com/Bilibotter/light-flow/flow v0.0.8/go.mod h1:0PY9M86uqsZLE3Yw16dGHl5YRGKghl40CSMhFQbw3Cs=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
 github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=
