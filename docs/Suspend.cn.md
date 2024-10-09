@@ -19,14 +19,23 @@ go get github.com/Bilibotter/light-flow-plugins/orm
 在代码中设置数据库连接并注入持久化插件，示例如下：
 
 ```go
-db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
-if err != nil {
-    log.Fatalf("failed to connect to database: %v", err)
-}
+import (
+	plugins "github.com/Bilibotter/light-flow-plugins/orm"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
+	"log"
+)
 
-err = plugins.NewPersistPlugin(db).InjectPersistence()
-if err != nil {
-    log.Fatalf("failed to inject persistence plugin: %v", err)
+func init() {
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	if err != nil {
+		log.Fatalf("failed to connect to database: %v", err)
+	}
+
+	err = plugins.NewSuspendPlugin(db).InjectSuspend()
+	if err != nil {
+		log.Fatalf("failed to inject persistence plugin: %v", err)
+	}
 }
 ```
 

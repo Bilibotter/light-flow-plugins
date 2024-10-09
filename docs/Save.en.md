@@ -15,14 +15,23 @@ Before using the plugin, ensure that the tables `steps`, `processes`, and `flows
 ### Setting Up Database Connection and Injecting the Plugin
 
 ```go
-db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
-if err != nil {
-    t.Fatalf("Failed to open database: %v", err)
-}
-err = plugins.NewPersistPlugin(db).InjectPersistence()
-if err != nil {
-    t.Logf("Error injecting persistence: %v", err)
-    return
+import (
+	plugins "github.com/Bilibotter/light-flow-plugins/orm"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
+	"log"
+)
+
+func init() {
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	if err != nil {
+		log.Fatalf("failed to connect to database: %v", err)
+	}
+
+	err = plugins.NewPersistPlugin(db).InjectPersistence()
+	if err != nil {
+		log.Fatalf("failed to inject persistence plugin: %v", err)
+	}
 }
 ```
 

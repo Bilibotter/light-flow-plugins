@@ -19,14 +19,23 @@ Before using the plugin, ensure that the `recover_records` and `checkpoints` tab
 In your code, set up the database connection and inject the persistence plugin as shown below:
 
 ```go
-db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
-if err != nil {
-    log.Fatalf("failed to connect to database: %v", err)
-}
+import (
+	plugins "github.com/Bilibotter/light-flow-plugins/orm"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
+	"log"
+)
 
-err = plugins.NewPersistPlugin(db).InjectPersistence()
-if err != nil {
-    log.Fatalf("failed to inject persistence plugin: %v", err)
+func init() {
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	if err != nil {
+		log.Fatalf("failed to connect to database: %v", err)
+	}
+
+	err = plugins.NewSuspendPlugin(db).InjectSuspend()
+	if err != nil {
+		log.Fatalf("failed to inject persistence plugin: %v", err)
+	}
 }
 ```
 
